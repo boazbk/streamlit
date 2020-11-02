@@ -20,8 +20,7 @@ st.text("Disclaimer: This may not 100% correspond to 538's simulator because:\n(
 def get_data():
     with urllib.request.urlopen("https://projects.fivethirtyeight.com/trump-biden-election-map/simmed-maps.json") as f:
         simulations = json.load(f)
-    df = pd.DataFrame(simulations['maps'], columns=[ "Winner", "Trump", "Biden"] + simulations['states'])
-    return df
+    return pd.DataFrame(simulations['maps'], columns=[ "Winner", "Trump", "Biden"] + simulations['states'])
 
 
 try:
