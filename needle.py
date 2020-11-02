@@ -43,6 +43,9 @@ fullnames = { "NC": "North Carolina" , "FL": "Florida", "GA": "Georgia" }
 
 bounds = { s+mod: -10 if mod==" (min)" else +10 for s in states for mod in [" (min)"," (max)"] }
 
+'''
+Choose the range of margins in each state - positive means Biden wins the state, negative means he loses:
+'''
 
 sliders = {s: st.slider(f"{fullnames[s]} (current 538 predicted margin: {-df[s].median():.1f}% ± {df[s].std():.1f}%)", -
                         10.0, +10.0, (-10.0, +10.0), 0.5, format="%.1f") for s in states}
