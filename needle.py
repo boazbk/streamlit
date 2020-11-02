@@ -56,7 +56,7 @@ for s in states:
 
 st.markdown(f"Based on above parameters, Biden's chance to win is __{100*(1-temp.Winner.mean()):.0f}%__")
 
-st.markdown(f"Number of simulations is {len(temp):,} out of {len(df):,} (smaller numbers means results less meaningful)")
+st.markdown(f"Number of simulations is __{len(temp):,}__ out of __{len(df):,}__ (a smaller number of simulations means that the prediction above is less meaningful)")
 
 fig, ax = plt.subplots(figsize = (12,6))
 
